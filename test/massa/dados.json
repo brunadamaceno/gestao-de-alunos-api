@@ -1,0 +1,29 @@
+{
+  "disciplinaId": "disciplina-matematica",
+  "casos": [
+    {
+      "aluno": {
+        "nome": "Fernanda Alves",
+        "email": "fernanda.alves.ddt@example.com",
+        "matricula": "2026001",
+        "senha": "senha123"
+      },
+      "trabalho": {
+        "titulo": "Lista de Exercicios - Fracoes",
+        "descricao": "Resolucao dos exercicios do capitulo 3."
+      }
+    },
+    {
+      "aluno": {
+        "nome": "Diego Ramos",
+        "email": "diego.ramos.ddt@example.com",
+        "matricula": "2026002",
+        "senha": "senha456"
+      },
+      "trabalho": {
+        "titulo": "Resumo - Geometria Plana",
+        "descricao": "Resumo dos principais conceitos de geometria plana."
+      }
+    }
+  ]
+}

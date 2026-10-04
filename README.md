@@ -87,6 +87,9 @@ Pré-requisitos:
 # instalar dependências
 npm install
 
+# configurar variáveis de ambiente (opcional; os valores padrão atendem ao uso local)
+cp .env.example .env
+
 # subir em modo produção
 npm start
 
@@ -96,6 +99,22 @@ npm run dev
 
 O servidor sobe por padrão em `http://localhost:3000` (pode ser alterado com a variável de
 ambiente `PORT`).
+
+O arquivo `.env` é carregado pelo Dotenv. Use `.env.example` como referência e não envie
+segredos ou configurações locais para o repositório.
+
+### Testes automatizados
+
+Os testes de integração usam Mocha, SuperTest e Chai. Eles precisam de um MongoDB acessível em
+`MONGODB_URI`; a API aplica o seed inicial quando o banco está vazio. Execute com:
+
+```bash
+npm test
+```
+
+Os cenários de fluxo usam dados orientados a dados em `test/massa/dados.json` e os helpers de
+login ficam em `test/helpers/authHelper.js`. O workflow em `.github/workflows/tests.yml` inicia
+um MongoDB como serviço e executa `npm test` em pushes e pull requests para `main`.
 
 ### Configuração do MongoDB
 
